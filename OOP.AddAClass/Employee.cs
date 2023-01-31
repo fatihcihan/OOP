@@ -22,7 +22,8 @@ namespace OOP.AddAClass
             get => _lastName;
             set => _lastName = value;
         }
-        public int Age { get; set; }     // auto-implemented property  ->  custom bir control yapilmayacaksa...
+        public int Age { get; set; }     // auto-implemented property  ->  custom bir control yapilmayacaksa.
+        public List<Employee> Employees => _list;   // or GetEmployees(); hic farketmez. Listeyi return ediyoruz direkt
 
         public Employee()   // default olarak zaten var, nesneden instance alinca calisan ilk metot.
         {
@@ -49,7 +50,13 @@ namespace OOP.AddAClass
             _list.Add(employee);
         }
 
+        public void AddRange(params Employee[] employees)        // params -> birden fazla kaydin parametere olarak verilmesine olanak tanir.
+        {
+            _list.AddRange(employees);
+        }
 
+
+        public List<Employee> GetEmployees() => _list;      // Expression-bodied metot
 
     }
 }
