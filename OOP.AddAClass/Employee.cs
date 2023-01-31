@@ -44,7 +44,12 @@ namespace OOP.AddAClass
             return $"{FirstName,-20} {LastName,-15} {Age,5}";
         }
 
-       
+        public void Add(Employee employee)
+        {
+            _list.Add(employee);
+        }
+
+
 
     }
 }
