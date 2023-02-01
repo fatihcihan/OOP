@@ -17,8 +17,11 @@ namespace OOP.Inheritance
             _s2.X = 5;
             _s2.Y = 55;
             Console.WriteLine("{0},{1}", _s2.X, _s2.Y);
-
             _s2.Draw();
+
+            new Triangle().Draw();
+
+            Console.ReadLine();
         }
     }
 }

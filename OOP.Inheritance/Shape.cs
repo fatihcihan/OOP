@@ -13,9 +13,9 @@ namespace OOP.Inheritance
         public int Height { get; set; }
         public int Width { get; set; }
 
-        public void Draw()
+        public virtual void Draw()      // virtual -> temel class'tan uretilen classlarda override edilebilir, yani gecersiz kilip ezebiliriz. Propertyler icin de kullanilir.
         {
-            Console.WriteLine("Base class draving task.");
+            Console.WriteLine("Base class drawing task.");
         }
     }
 }
