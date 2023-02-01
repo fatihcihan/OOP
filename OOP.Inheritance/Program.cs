@@ -7,6 +7,21 @@ namespace OOP.Inheritance
     {
         static void Main(string[] args)
         {
+
+            var s1 = new Oblong(10, 20);  // parametreleri direkt base classin constructorinda geciyoruz.
+            Console.WriteLine("{0},{1}", s1.X, s1.Y);
+
+            var s2 = new Circle(5, 5);
+            Console.WriteLine("{0},{1}", s2.X, s2.Y);   // output -> 0,0   cunku constructor'da base constructor'a parametre gondermedik.
+
+            var s3 = new Square(45, 50);
+            Console.WriteLine("{0},{1}", s3.X, s3.Y);   // Square'den base'e (Oblong'a) gidiyor. Oblong'dan da base'e (Shape'e) gidiyor.
+
+            Console.ReadLine();
+        }
+
+        private static void Polymorphism()
+        {
             var shapes = new List<Shape>()
             {
                 new Triangle(),
@@ -22,7 +37,6 @@ namespace OOP.Inheritance
             }
 
             new Square().Calculate();
-            Console.ReadLine();
         }
 
         private static void VirtualKeywords()

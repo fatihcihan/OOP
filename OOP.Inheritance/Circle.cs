@@ -8,6 +8,15 @@ namespace OOP.Inheritance
 {
     public class Circle : Shape
     {
+        public Circle()
+        {
+
+        }
+
+        public Circle(int x, int y)
+        {
+
+        }
         public override void Draw()
         {
             Console.WriteLine("Circle drawing task.");

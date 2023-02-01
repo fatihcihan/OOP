@@ -9,6 +9,16 @@ namespace OOP.Inheritance
 {
     public class Oblong : Shape
     {
+        public Oblong()
+        {
+
+        }
+
+        public Oblong(int x, int y) : base(x, y)    // x ve y parametrelerini base'e gonderiyoruz artik.
+        {
+            
+        }
+
         public override void Draw()
         {
             Console.WriteLine("Oblong drawing task.");
